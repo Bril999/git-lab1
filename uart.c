@@ -21,3 +21,10 @@ void UART_SendString(const char *str)
         UART_SendByte((uint8_t)*str++);
     }
 }
+
+uint8_t UART_ReceiveByte(void)
+{
+    uint8_t data = 'R';
+    printf("UART received: %c\n", data);
+    return data;
+}
