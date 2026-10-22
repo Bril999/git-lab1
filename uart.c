@@ -36,3 +36,8 @@ void UART_SendBuffer(const uint8_t *buffer, uint32_t size)
         UART_SendByte(buffer[i]);
     }
 }
+
+void UART_SendNumber(int number)
+{
+    printf("%d", number);
+}
