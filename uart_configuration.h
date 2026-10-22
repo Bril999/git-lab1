@@ -1,0 +1,8 @@
+#ifndef UART_CONFIG_H
+#define UART_CONFIG_H
+
+#define UART_DEFAULT_BAUDRATE 115200
+#define UART_RX_BUFFER_SIZE   64
+#define UART_TX_BUFFER_SIZE   64
+
+#endif
