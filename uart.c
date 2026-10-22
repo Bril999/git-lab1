@@ -41,3 +41,9 @@ void UART_SendNumber(int number)
 {
     printf("%d", number);
 }
+
+void UART_SendLine(const char *str)
+{
+    UART_SendString(str);
+    UART_SendByte('\n');
+}
