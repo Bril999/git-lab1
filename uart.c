@@ -16,6 +16,8 @@ void UART_SendByte(uint8_t data)
 
 void UART_SendString(const char *str)
 {
+    printf("[DEV2] Sending string: ");
+
     while (*str)
     {
         UART_SendByte((uint8_t)*str++);
