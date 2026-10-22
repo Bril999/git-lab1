@@ -59,3 +59,20 @@ void UART_SendTestMessage(void)
 {
     UART_SendString("Cherry-pick test successful!\n");
 }
+
+int UART_IsInitialized(void)
+{
+    return uart_baudrate != 0;
+}
+
+uint32_t UART_GetBaudrate(void)
+{
+    return uart_baudrate;
+}
+
+void UART_PrintConfig(void)
+{
+    printf("UART baudrate: %u\n", (unsigned)UART_GetBaudrate());
+    printf("UART initialized: %s\n",
+           UART_IsInitialized() ? "YES" : "NO");
+}

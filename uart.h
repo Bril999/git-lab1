@@ -12,5 +12,8 @@ void UART_SendNumber(int number);
 void UART_SendLine(const char *str);
 void UART_SendHex(uint8_t data);
 void UART_SendTestMessage(void);
+int UART_IsInitialized(void);
+uint32_t UART_GetBaudrate(void);
+void UART_PrintConfig(void);
 
 #endif
