@@ -10,5 +10,6 @@ uint8_t UART_ReceiveByte(void);
 void UART_SendBuffer(const uint8_t *buffer, uint32_t size);
 void UART_SendNumber(int number);
 void UART_SendLine(const char *str);
+void UART_SendHex(uint8_t data);
 
 #endif

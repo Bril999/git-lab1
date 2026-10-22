@@ -47,3 +47,8 @@ void UART_SendLine(const char *str)
     UART_SendString(str);
     UART_SendByte('\n');
 }
+
+void UART_SendHex(uint8_t data)
+{
+    printf("0x%02X", (unsigned int)data);
+}
