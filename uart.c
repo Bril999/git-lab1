@@ -28,3 +28,16 @@ uint8_t UART_ReceiveByte(void)
     printf("UART received: %c\n", data);
     return data;
 }
+
+void UART_SendBuffer(const uint8_t *buffer, uint32_t size)
+{
+    for (uint32_t i = 0; i < size; i++)
+    {
+        UART_SendByte(buffer[i]);
+    }
+}
+
+void UART_SendNumber(int number)
+{
+    printf("%d", number);
+}
