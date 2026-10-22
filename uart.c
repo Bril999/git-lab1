@@ -54,3 +54,8 @@ void UART_SendHex(uint8_t data)
 {
     printf("0x%02X", (unsigned int)data);
 }
+
+void UART_SendTestMessage(void)
+{
+    UART_SendString("Cherry-pick test successful!\n");
+}
