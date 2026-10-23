@@ -59,3 +59,13 @@ void UART_SendTestMessage(void)
 {
     UART_SendString("Cherry-pick test successful!\n");
 }
+
+void UART_SendSeparator(void)
+{
+    UART_SendString("----------------\n");
+}
+
+void UART_SendOK(void)
+{
+    UART_SendString("UART: OK\n");
+}
