@@ -79,3 +79,23 @@ uint32_t UART_GetBaudrate(void)
 {
     return uart_baudrate;
 }
+
+void UART_SendHexBuffer(const uint8_t *buffer, uint32_t size)
+{
+    if (buffer == NULL)
+    {
+        return;
+    }
+
+    for (uint32_t i = 0; i < size; i++)
+    {
+        printf("%02X", (unsigned int)buffer[i]);
+
+        if (i + 1 < size)
+        {
+            printf(" ");
+        }
+    }
+
+    printf("\n");
+}
