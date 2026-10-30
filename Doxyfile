@@ -1,0 +1,17 @@
+
+PROJECT_NAME           = "UART Driver"
+PROJECT_NUMBER         = "1.1.0"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = uart.h uart.c uart_diag.c
+FILE_PATTERNS          = *.h *.c
+EXTRACT_ALL            = YES
+RECURSIVE              = NO
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+WARN_IF_UNDOCUMENTED   = YES
+QUIET                  = YES
