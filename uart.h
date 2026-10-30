@@ -83,9 +83,19 @@ int UART_IsInitialized(void);
 uint32_t UART_GetBaudrate(void);
 
 /**
- * @brief Prints a buffer as hexadecimal bytes.
- * @param buffer Pointer to the byte buffer.
- * @param size Number of bytes.
+ * @brief Transmits a byte buffer as hexadecimal text.
+ *
+ * Each byte is represented by two uppercase hexadecimal
+ * digits. Adjacent bytes are separated by spaces.
+ *
+ * Example:
+ * Input:  {0x55, 0xAA, 0x10}
+ * Output: 55 AA 10
+ *
+ * @param buffer Pointer to the input byte buffer.
+ * @param size Number of bytes to transmit.
+ *
+ * @note If buffer is NULL, the function returns without output.
  */
 void UART_SendHexBuffer(const uint8_t *buffer, uint32_t size);
 
