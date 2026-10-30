@@ -38,6 +38,4 @@ jobs:
         run: gcc -Wall -Wextra -Werror test_uart.c uart.c uart_diag.c -o test_uart
 
       - name: Run unit tests
-        run: |
-          sleep 120
-          ./test_uart
+        run: ./test_uart
