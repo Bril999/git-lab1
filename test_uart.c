@@ -33,11 +33,21 @@ static void test_uart_transmission(void)
     printf("[PASS] UART transmission smoke test\n");
 }
 
+static void test_uart_hex_buffer(void)
+{
+    const uint8_t data[] = {0x55, 0xAA, 0x10};
+
+    UART_SendHexBuffer(data, sizeof(data));
+
+    printf("[PASS] UART hexadecimal buffer transmission\n");
+}
+
 int main(void)
 {
     test_uart_initialization();
     test_uart_reinitialization();
     test_uart_transmission();
+    test_uart_hex_buffer();
 
     printf("All UART tests passed!\n");
 
