@@ -1,0 +1,14 @@
+
+# Compiled binaries
+*.exe
+*.o
+*.obj
+*.out
+
+# Build directories
+build/
+dist/
+
+# Generated documentation
+docs/html/
+docs/latex/

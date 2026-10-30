@@ -1,0 +1,27 @@
+
+name: UART CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build UART project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check GCC version
+        run: gcc --version
+
+      - name: Compile UART project
+        run: gcc -Wall -Wextra main.c uart.c uart_diag.c -o uart_app
+
+      - name: Run UART application
+        run: ./uart_app
