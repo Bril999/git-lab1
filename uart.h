@@ -14,5 +14,7 @@ void UART_SendHex(uint8_t data);
 void UART_SendTestMessage(void);
 void UART_SendSeparator(void);
 void UART_SendOK(void);
+int UART_IsInitialized(void);
+uint32_t UART_GetBaudrate(void);
 
 #endif

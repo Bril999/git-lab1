@@ -69,3 +69,13 @@ void UART_SendOK(void)
 {
     UART_SendString("UART: OK\n");
 }
+
+int UART_IsInitialized(void)
+{
+    return uart_baudrate != 0;
+}
+
+uint32_t UART_GetBaudrate(void)
+{
+    return uart_baudrate;
+}
