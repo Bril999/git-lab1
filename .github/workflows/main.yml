@@ -25,3 +25,17 @@ jobs:
 
       - name: Run UART application
         run: ./uart_app
+
+  test:
+    name: UART unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile unit tests
+        run: gcc -Wall -Wextra -Werror test_uart.c uart.c uart_diag.c -o test_uart
+
+      - name: Run unit tests
+        run: ./test_uart
